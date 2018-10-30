@@ -10,13 +10,15 @@ let turn = 0
 let world = new World()
 let hero = new Hero('Jean-Michel Paladin')
 
-submit.addEventListener('click', (event) => { choose(event.target.value) })
-
 world.enemies = [
   new Enemy('Balrog'),
   new Enemy('Goblin'),
   new Enemy('Squelette')
 ]
+
+show()
+
+submit.addEventListener('click', (event) => { choose(event.target.value) })
 
 function show () {
   if (turn === 0) {
@@ -58,5 +60,3 @@ function choose (value) {
     show()
   }
 }
-
-show()
